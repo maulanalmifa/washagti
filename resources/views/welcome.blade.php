@@ -73,6 +73,7 @@
                                         <li><a href="/estimasi">Estimasi</a></li>
                                         <li><a href="/blog">Blog</a></li>
                                         <li><a href="/tentang">Tentang</a></li>
+                                        <!-- <li><a href="/login">Login</a></li> -->
                                     </ul>
                                 </nav>
                             </div>
