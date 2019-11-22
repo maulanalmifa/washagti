@@ -1,6 +1,6 @@
-@extends('welcome')
+@extends('layouts.app')
 @section('judul','Home')
-@section('konten')
+@section('content')
 <!-- slider_area_start -->
 <div class="slider_area">
         <div class="slider_active owl-carousel">

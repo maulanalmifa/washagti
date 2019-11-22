@@ -1,5 +1,5 @@
 @extends('welcome')
 @section('judul','Tentang')
-@section('konten')
+@section('content')
 Ini halaman kami
 @endsection

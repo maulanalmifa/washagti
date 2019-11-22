@@ -1,6 +1,6 @@
 @extends('welcome')
 @section('judul','Cek Pesanan')
-@section('konten')
+@section('content')
 <div class="section-top-border">
 	<h3 class="mb-30">Table</h3>
 	<div class="progress-table-wrap">

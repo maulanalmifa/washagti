@@ -12,15 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
-Route::get('/login','UserController@login');
-Route::get('register','UserController@regist');
-Route::get('estimasi','EstimateController@index');
-Route::get('blog','BlogController@index');
-Route::get('tentang','AboutController@index');
-Route::post('pesanan/tambah','PesananController@pesan');
-Route::get('pesanan/cek','PesananController@cek');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('estimasi','EstimateController@index');
+Route::get('blog','BlogController@index');
+Route::get('tentang','AboutController@index');
+Route::get('/pesanan', 'PesananController@daftar');
+Route::post('pesanan/tambah','PesananController@pesan');

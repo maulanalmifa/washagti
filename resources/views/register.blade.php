@@ -21,15 +21,6 @@
                 @enderror
             </div>
 
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input class="form-control @error('username') is-invalid @enderror" type="text" name="username" placeholder="Username" />
-                @error('username')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
 
             <div class="form-group">
                 <label for="email">Email</label>

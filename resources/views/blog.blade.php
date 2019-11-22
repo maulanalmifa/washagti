@@ -1,5 +1,5 @@
 @extends('welcome')
 @section('judul','Blog')
-@section('konten')
+@section('content')
 Ini Blog
 @endsection

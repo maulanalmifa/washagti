@@ -1,5 +1,5 @@
 @extends('welcome')
 @section('judul','Estimasi')
-@section('konten')
+@section('content')
 <p>Hahahahahahahahha</p>
 @endsection
