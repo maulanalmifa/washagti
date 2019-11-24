@@ -228,7 +228,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="col-xl-6">
-                            <input type="text"  placeholder="Nama" name="nama" value="{{ Auth::user()->name }}">
+                            <input type="text"  placeholder="Nama" name="nama">
                         </div>
                         <div class="col-xl-6">
                             <input type="tel"  placeholder="Nomor Telepon" name="telpon">
