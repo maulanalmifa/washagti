@@ -15,8 +15,10 @@ class PesananController extends Controller
             'telpon' => $request->telpon,
             'alamat' => $request->alamat,
             'jenis' => $request->jenis,
-            'kecepatan' => $request->kecepatan
+            'kecepatan' => $request->kecepatan,
+            'do'=>$request->do
     ]);
+    Pesanan::select('EXEC getjenis()');
     return redirect('/pesanan');
     }
 

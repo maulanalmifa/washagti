@@ -69,7 +69,7 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="/home">Home</a></li>
+                                        <li><a href="/">Home</a></li>
                                         <li><a href="/estimasi">Estimasi</a></li>
                                         <li><a href="/blog">Blog</a></li>
                                         <li><a href="/tentang">Tentang</a></li>
@@ -99,7 +99,6 @@
                                 </nav>
                             </div>
                         </div>
-                        @if (Session::has('id'))
                         <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                             <div class="Appointment">
                                 <div class="book_btn d-none d-lg-block">
@@ -107,7 +106,6 @@
                                 </div>
                             </div>
                         </div>
-                        @endif
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
@@ -230,7 +228,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="col-xl-6">
-                            <input type="text"  placeholder="Nama" name="nama">
+                            <input type="text"  placeholder="Nama" name="nama" value="{{ Auth::user()->name }}">
                         </div>
                         <div class="col-xl-6">
                             <input type="tel"  placeholder="Nomor Telepon" name="telpon">
@@ -238,7 +236,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                         <div class="col-xl-12">
                             <input type="text"  placeholder="Alamat" name="alamat">
                         </div>
-                        <div class="col-xl-6">
+                        <div class="col-xl-4">
                             <select class="form-select wide" id="default-select" class="" name="jenis">
                             
                                 <option data-display="Pilih Layanan">Layanan</option>
@@ -249,11 +247,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                 <option value="Setrika">Setrika</option>
                             </select>
                         </div>
-                        <div class="col-xl-6">
+                        <div class="col-xl-4">
                             <select class="form-select wide" id="default-select" class="" name="kecepatan">
                                 <option data-display="Jenis Laundry">Jenis</option>
                                 <option value="Standar">Standar</option>
                                 <option value="Kilat">Kilat</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-4">
+                            <select class="form-select wide" id="default-select" name="do">
+                                <option data-display="DO">Delivery Order</option>
+                                <option value="None">None</option>
+                                <option value="Antar">Antar</option>
+                                <option value="Antar Jemput">Antar Jemput</option>
                             </select>
                         </div>
                         <div class="col-xl-12">
