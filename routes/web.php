@@ -32,3 +32,4 @@ Route::get('tentang','AboutController@index');
 Route::get('/pesanan', 'PesananController@daftar');
 Route::post('pesanan/tambah','PesananController@pesan');
 Route::get('/washadmin', 'AdminController@index');
+Route::get('/washadmin/update/{id}', 'AdminController@update');
