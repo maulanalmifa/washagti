@@ -70,9 +70,9 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="/home">Home</a></li>
-                                        <li><a href="/estimasi">Estimasi</a></li>
+                                        <!--<li><a href="/estimasi">Estimasi</a></li>
                                         <li><a href="/blog">Blog</a></li>
-                                        <li><a href="/tentang">Tentang</a></li>
+                                        <li><a href="/tentang">Tentang</a></li> -->
                                         @guest
                                         <li>
                                             <a href="{{ route('login') }}">{{ __('Login') }}</a>

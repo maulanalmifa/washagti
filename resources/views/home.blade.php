@@ -12,7 +12,7 @@
                                 <h3> <span>Washagti</span> <br>
                                     Laundry Sakti </h3>
                                 <p>Serahkan urusan cuci mencucu kepada kami</p>
-                                <a href="#" class="boxed-btn3">Laundry Sekarang!</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                                 <h3> <span>Washagti</span> <br>
                                     Laundry Sakti </h3>
                                 <p>Serahkan urusan cuci mencuci kepada kami</p>
-                                <a href="#" class="boxed-btn3">Laundry Sekarang!</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                                 <h3> <span>Washagti</span> <br>
                                     Laundry Sakti </h3>
                                 <p>Serahkan urusan cuci mencuci kepada kami</p>
-                                <a href="#" class="boxed-btn3">Laundry Sekarang!</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -483,4 +483,5 @@
         </div>
     </div>
     <!-- Emergency_contact end -->
+    
 @endsection

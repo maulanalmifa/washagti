@@ -13,6 +13,7 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
+    <link href="/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
     <link rel="stylesheet" href="/css/magnific-popup.css">
@@ -70,10 +71,13 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="/">Home</a></li>
-                                        <li><a href="/estimasi">Estimasi</a></li>
+                                        <!-- <li><a href="/estimasi">Estimasi</a></li>
                                         <li><a href="/blog">Blog</a></li>
-                                        <li><a href="/tentang">Tentang</a></li>
+                                        <li><a href="/tentang">Tentang</a></li> -->
+                                        @if(!Auth::check())
+                                        @else
                                         <li><a href="/pesanan">Pesanan Saya</a></li>
+                                        @endif
                                         @guest
                                         <li>
                                             <a href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -99,6 +103,9 @@
                                 </nav>
                             </div>
                         </div>
+                        @if(!Auth::check())
+                        
+                        @else
                         <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                             <div class="Appointment">
                                 <div class="book_btn d-none d-lg-block">
@@ -106,6 +113,7 @@
                                 </div>
                             </div>
                         </div>
+                        @endif
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
