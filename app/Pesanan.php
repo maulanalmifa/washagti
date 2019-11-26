@@ -8,4 +8,8 @@ class Pesanan extends Model
 {
     public $table = "pesanan";
     protected $fillable = ['name','telpon','alamat','jenis','kecepatan','do'];
+
+    public function harga(){
+        return $this->hasOne('App\Harga');
+    }
 }

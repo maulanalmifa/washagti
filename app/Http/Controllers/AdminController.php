@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Pesanan;
+use PDF;
 
 class AdminController extends Controller
 {
@@ -20,6 +21,7 @@ class AdminController extends Controller
     }
 
     public function simpan(Request $request){
+        $harga = DB::table('harga_jenis')->All();  
         Pesanan::where('id',$request->id)->update([
             'kg'=>$request->kg,
             'harga_jenis'=>$request->harga_jenis,
@@ -29,5 +31,11 @@ class AdminController extends Controller
             'Status'=>"Selesai"
         ]);
         return redirect('washadmin');
+    }
+
+    public function cetak($id){
+        $pesanan = Pesanan::where('id',$id)->get();
+        $pdf = PDF::loadview('admincetak',['pesanan'=>$pesanan]);
+        return $pdf->stream();
     }
 }

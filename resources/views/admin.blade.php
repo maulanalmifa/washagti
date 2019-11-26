@@ -21,9 +21,7 @@
                       <th>Dipesan pada</th>
                       <th>Nama Pemesan</th>
                       <th>Telepon</th>
-                      <th>Alamat</th>
                       <th>Jenis Layanan</th>
-                      <th>Kecepatan</th>
                       <th>Delivery</th>
                       <th>Aksi</th>
                     </tr>
@@ -33,9 +31,7 @@
                       <th>Dipesan pada</th>
                       <th>Nama Pemesan</th>
                       <th>Telepon</th>
-                      <th>Alamat</th>
                       <th>Jenis Layanan</th>
-                      <th>Kecepatan</th>
                       <th>Delivery</th>
                       <th>Aksi</th>
                     </tr>
@@ -46,14 +42,12 @@
                       <td>{{$p->created_at}}</td>
                       <td>{{$p->name}}</td>
                       <td>{{$p->telpon}}</td>
-                      <td>{{$p->alamat}}</td>
                       <td>{{$p->jenis}}</td>
-                      <td>{{$p->kecepatan}}</td>
                       <td>{{$p->do}}</td>
                       <td><a href="/washadmin/update/{{$p->id}}" class="btn btn-info btn-circle btn-sm" title="Selesai">
                           <i class="fas fa-check"></i></a>
                       @unless($p->status == 'Proses')
-                      <a href="#" class="btn btn-danger btn-circle btn-sm" title="Cetak Nota">
+                      <a target="_blank" href="/washadmin/cetak/{{$p->id}}" class="btn btn-danger btn-circle btn-sm" title="Cetak Nota">
                           <i class="fas fa-file"></i></a></td>
                       @endunless
                     </tr>

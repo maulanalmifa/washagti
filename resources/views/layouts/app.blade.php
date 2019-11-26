@@ -201,7 +201,7 @@
                                         Address
                                 </h3>
                                 <p>
-                                    Jl. Semarang No. 5 Malang <br>
+                                    Jl. Sumbersari No. 5 Malang <br>
                                     081359XXXX <br>
                                     info@washagti.com
                                 </p>
@@ -236,34 +236,29 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="col-xl-6">
-                            <input type="text"  placeholder="Nama" name="nama">
+                            <input type="text"  placeholder="Nama" name="nama" required>
                         </div>
                         <div class="col-xl-6">
-                            <input type="tel"  placeholder="Nomor Telepon" name="telpon">
+                            <input type="tel"  placeholder="Nomor Telepon" name="telpon" required>
                         </div>
                         <div class="col-xl-12">
-                            <input type="text"  placeholder="Alamat" name="alamat">
+                            <input type="text"  placeholder="Alamat" name="alamat" required>
                         </div>
-                        <div class="col-xl-4">
-                            <select class="form-select wide" id="default-select" class="" name="jenis">
+                        <div class="col-xl-6">
+                            <select class="form-select wide" id="default-select" class="" name="jenis" required>
                             
                                 <option data-display="Pilih Layanan">Layanan</option>
-                                <option value="Cuci Basah">Cuci Basah</option>
-                                <option value="Cuci Kering">Cuci Kering</option>
-                                <option value="Cuci Kering Setrika">Cuci Kering Setrika</option>
+                                <option value="Cuci Basah Standar">Cuci Basah Standar</option>
+                                <option value="Cuci Basah Kilat">Cuci Basah Kilat</option>
+                                <option value="Cuci Kering Standar">Cuci Kering Standar</option>
+                                <option value="Cuci Kering Kilat">Cuci Kering Kilat</option>
+                                <option value="Cuci Kering Setrika Standar">Cuci Kering Setrika Standar</option>
+                                <option value="Cuci Kering Setrika Kilat">Cuci Kering Setrika Kilat</option>
                                 <option value="Cuci Sepatu">Cuci Sepatu</option>
-                                <option value="Setrika">Setrika</option>
                             </select>
                         </div>
-                        <div class="col-xl-4">
-                            <select class="form-select wide" id="default-select" class="" name="kecepatan">
-                                <option data-display="Jenis Laundry">Jenis</option>
-                                <option value="Standar">Standar</option>
-                                <option value="Kilat">Kilat</option>
-                            </select>
-                        </div>
-                        <div class="col-xl-4">
-                            <select class="form-select wide" id="default-select" name="do">
+                        <div class="col-xl-6">
+                            <select class="form-select wide" id="default-select" name="do" required>
                                 <option data-display="DO">Delivery Order</option>
                                 <option value="None">None</option>
                                 <option value="Antar">Antar</option>

@@ -14,7 +14,6 @@
 						<div class="country">Jenis Laundry</div>
 						<div class="country">Status</div>
 						<div class="country">Total Harga</div>
-						
 					</div>
 					@foreach($pesanan as $g)
 					<div class="table-row">
@@ -30,7 +29,7 @@
 						<div class="country">{{ $g->status }}</div>
 					@if($g->status == 'Selesai')
 						<div class="country">{{ $g->total }}
-							<div class="serial"><a href="#" class="btn btn-danger btn-circle btn-sm" title="Cetak Nota">
+							<div class="serial"><a target="_blank" href="/pesanan/cetak/{{$g->id}}" class="btn btn-danger btn-circle btn-sm" title="Cetak Nota">
 							<i class="fas fa-file"></i></a></div>
 						</div>
 					@else
