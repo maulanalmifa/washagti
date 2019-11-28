@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Pesanan;
+use App\Harga;
 use PDF;
 
 class AdminController extends Controller
@@ -21,13 +22,12 @@ class AdminController extends Controller
     }
 
     public function simpan(Request $request){
-        $harga = DB::table('harga_jenis')->All();  
+        $harga = Harga::where('id',$request->id_jenis)->first();
         Pesanan::where('id',$request->id)->update([
             'kg'=>$request->kg,
-            'harga_jenis'=>$request->harga_jenis,
-            'harga_kecepatan'=>$request->harga_kecepatan,
+            'harga_jenis'=>$harga->harga,
             'harga_do'=>$request->harga_do,
-            'total'=>($request->kg * $request->harga_jenis)+$request->harga_kecepatan+$request->harga_do,
+            'total'=>$request->kg * $harga->harga,
             'Status'=>"Selesai"
         ]);
         return redirect('washadmin');

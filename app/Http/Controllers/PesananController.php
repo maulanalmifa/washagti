@@ -6,20 +6,22 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Pesanan;
+use App\Harga;
 use PDF;
 
 class PesananController extends Controller
 {
     public function pesan(Request $request){
+        $harga = Harga::select('id')->where('nama',$request->jenis)->first();
         Pesanan::create([
             'name' => $request->nama,
             'telpon' => $request->telpon,
             'alamat' => $request->alamat,
+            'id_jenis' => $harga->id,
             'jenis' => $request->jenis,
-            'kecepatan' => $request->kecepatan,
-            'do'=>$request->do
+            'do'=>$request->do,
+            'Status'=>'Proses'
     ]);
-    Pesanan::select('EXEC getjenis()');
     return redirect('/pesanan');
     }
 

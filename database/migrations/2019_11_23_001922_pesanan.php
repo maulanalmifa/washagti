@@ -20,12 +20,11 @@ class Pesanan extends Migration
             $table->char('name',255);
             $table->char('telpon',15);
             $table->text('alamat');
+            $table->integer('id_jenis');
             $table->char('jenis',255);
-            $table->char('kecepatan',255);
             $table->char('do',255);
             $table->integer('kg')->default(0);
             $table->bigInteger('harga_jenis')->default(0);
-            $table->bigInteger('harga_kecepatan')->default(0);
             $table->bigInteger('harga_do')->default(0);
             $table->bigInteger('total')->default(0);
             $table->char('status',30)->default('Proses');
