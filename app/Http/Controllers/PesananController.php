@@ -13,7 +13,7 @@ use PDF;
 class PesananController extends Controller
 {
     public function pesan(Request $request){
-        $harga = Harga::select('id')->where('nama',$request->jenisharga)->first();
+        $harga = Harga::select('id')->where('nama',$request->jenis)->first();
         $do = Delivery::select('id')->where('nama',$request->do)->first();
         Pesanan::create([
             'name' => $request->nama,
