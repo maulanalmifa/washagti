@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Harga extends Model
+class Delivery extends Model
 {
-    public $table = "jenis";
+    public $table = "delivery";
     protected $fillable = ['nama','harga'];
     public function harga(){
         return $this->belongsTo('App\Pesanan');

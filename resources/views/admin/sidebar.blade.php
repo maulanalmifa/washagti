@@ -40,12 +40,21 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="/washadmin">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
-
+      <li class="nav-item ">
+        <a class="nav-link" href="/washadmin/harga">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Harga Layanan</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/washadmin/do">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Harga Delivery Order</span></a>
+      </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 

@@ -30,9 +30,9 @@
                         <td>{{ $p->jenis }}</td>
                     </tr>
                     <tr>
-                        <td>Kecepatan Layanan</td>
+                        <td>Jumlah Berat</td>
                         <td>:</td>
-                        <td>{{ $p->kecepatan }}</td>
+                        <td>{{ $p->kg }}</td>
                     </tr>
                     <tr>
                         <td>Delivery Order</td>

@@ -7,17 +7,20 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Pesanan;
 use App\Harga;
+use App\Delivery;
 use PDF;
 
 class PesananController extends Controller
 {
     public function pesan(Request $request){
-        $harga = Harga::select('id')->where('nama',$request->jenis)->first();
+        $harga = Harga::select('id')->where('nama',$request->jenisharga)->first();
+        $do = Delivery::select('id')->where('nama',$request->do)->first();
         Pesanan::create([
             'name' => $request->nama,
             'telpon' => $request->telpon,
             'alamat' => $request->alamat,
             'id_jenis' => $harga->id,
+            'id_do' =>$do->id,
             'jenis' => $request->jenis,
             'do'=>$request->do,
             'Status'=>'Proses'

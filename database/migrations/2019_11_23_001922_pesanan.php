@@ -21,6 +21,7 @@ class Pesanan extends Migration
             $table->char('telpon',15);
             $table->text('alamat');
             $table->integer('id_jenis');
+            $table->integer('id_do');
             $table->char('jenis',255);
             $table->char('do',255);
             $table->integer('kg')->default(0);
