@@ -23,6 +23,7 @@
                       <th>Telepon</th>
                       <th>Jenis Layanan</th>
                       <th>Delivery</th>
+                      <th>Total Tagihan</th>
                       <th>Aksi</th>
                     </tr>
                   </thead>
@@ -33,6 +34,7 @@
                       <th>Telepon</th>
                       <th>Jenis Layanan</th>
                       <th>Delivery</th>
+                      <th>Total Tagihan</th>
                       <th>Aksi</th>
                     </tr>
                   </tfoot>
@@ -44,6 +46,11 @@
                       <td>{{$p->telpon}}</td>
                       <td>{{$p->jenis}}</td>
                       <td>{{$p->do}}</td>
+                      @if($p->total == 0)
+                      <td>Dalam Proses</td>
+                      @else
+                      <td>{{$p->total}}</td>
+                      @endif
                       <td><a href="/washadmin/update/{{$p->id}}" class="btn btn-info btn-circle btn-sm" title="Selesai">
                           <i class="fas fa-check"></i></a>
                       @unless($p->status == 'Proses')

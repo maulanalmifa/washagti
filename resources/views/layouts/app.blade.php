@@ -137,7 +137,7 @@
                             <div class="footer_widget">
                                 <div class="footer_logo">
                                     <a href="#">
-                                        <img src="/img/footer_logo.png" alt="">
+                                        <h4>Washagti</h4>
                                     </a>
                                 </div>
                                 <p>
@@ -181,24 +181,10 @@
     
                             </div>
                         </div>
-                        <div class="col-xl-2 col-md-6 col-lg-2">
-                            <div class="footer_widget">
-                                <h3 class="footer_title">
-                                        Useful Links
-                                </h3>
-                                <ul>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#"> Contact</a></li>
-                                    <li><a href="#"> Appointment</a></li>
-                                </ul>
-                            </div>
-                        </div>
                         <div class="col-xl-3 col-md-6 col-lg-3">
                             <div class="footer_widget">
                                 <h3 class="footer_title">
-                                        Address
+                                        Alamat
                                 </h3>
                                 <p>
                                     Jl. Sumbersari No. 5 Malang <br>

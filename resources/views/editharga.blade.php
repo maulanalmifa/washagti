@@ -5,7 +5,7 @@
 <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <a href="/washadmin">Kembali</a>    
-        <h1 class="h3 mb-0 text-gray-800">Update Harga</h1>
+        <h1 class="h3 mb-0 text-gray-800">Edit Harga</h1>
     </div>
     @foreach($jenis as $p)
     <!-- COntent Row -->

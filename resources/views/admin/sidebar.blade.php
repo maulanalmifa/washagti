@@ -47,12 +47,12 @@
       </li>
       <li class="nav-item ">
         <a class="nav-link" href="/washadmin/harga">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <i class="fas fa-tags"></i>
           <span>Harga Layanan</span></a>
       </li>
       <li class="nav-item ">
         <a class="nav-link" href="/washadmin/do">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <i class="fas fa-truck"></i>
           <span>Harga Delivery Order</span></a>
       </li>
       <!-- Divider -->

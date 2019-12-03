@@ -41,7 +41,7 @@
                     <label for="do">Delivery Order</label>
                     <input type="hidden" name="id_do" value="{{$p->id_do}}">
                     <input type="text" class="form-control form-control-user" name="do" value="{{$p->do}}" disabled>
-                </div>3000
+                </div>
                 @if($p->status == 'Proses')
                 <div class="col-sm-3">
                     <label for="kg">Jumlah Berat (kg)</label>
