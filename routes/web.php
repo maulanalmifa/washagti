@@ -36,6 +36,7 @@ Route::get('/washadmin', 'AdminController@index');
 Route::get('/washadmin/update/{id}', 'AdminController@update');
 Route::post('/washadmin/simpan', 'AdminController@simpan');
 Route::get('/washadmin/cetak/{id}', 'AdminController@cetak');
+Route::get('/washadmin/hapus/{id}','AdminController@hapus');
 Route::get('/washadmin/harga', 'AdminController@harga');
 Route::get('/washadmin/up/{id}','AdminController@updateharga');
 Route::post('/washadmin/up/simpan','AdminController@simpanharga');

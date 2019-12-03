@@ -45,7 +45,7 @@
                 @if($p->status == 'Proses')
                 <div class="col-sm-3">
                     <label for="kg">Jumlah Berat (kg)</label>
-                    <input type="number" class="form-control form-control-user" name="kg" placeholder="Jumlah Berat (kg)" required>
+                    <input type="number" class="form-control form-control-user" name="kg" placeholder="1.0" step="0.1" min="0" max="10" required>
                 </div>
                 @else
                 <div class="col-sm-3">
@@ -60,7 +60,7 @@
             </div>
             
             @if($p->status == 'Proses')
-            <input type="submit" value="Simpan" class="d-none d-sm-inline-block btn btn-lg btn-info shadow-sm"><i class="fas fa-check fa-sm text-white-50"></i>
+            <input type="submit" onclick="return confirm('Data Pesanan {{$p->name}} Apakah sudah benar?')" value="Simpan" class="d-none d-sm-inline-block btn btn-lg btn-info shadow-sm"><i class="fas fa-check fa-sm text-white-50"></i>
             @endif
             </form>
 

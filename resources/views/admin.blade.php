@@ -51,11 +51,13 @@
                       @else
                       <td>{{$p->total}}</td>
                       @endif
-                      <td><a href="/washadmin/update/{{$p->id}}" class="btn btn-info btn-circle btn-sm" title="Selesai">
+                      <td><a href="/washadmin/update/{{$p->id}}" class="btn btn-primary btn-circle btn-sm" title="Selesai">
                           <i class="fas fa-check"></i></a>
                       @unless($p->status == 'Proses')
-                      <a target="_blank" href="/washadmin/cetak/{{$p->id}}" class="btn btn-danger btn-circle btn-sm" title="Cetak Nota">
-                          <i class="fas fa-file"></i></a></td>
+                      <a target="_blank" href="/washadmin/cetak/{{$p->id}}" class="btn btn-info btn-circle btn-sm" title="Cetak Nota">
+                          <i class="fas fa-file"></i></a>
+                      <a onclick="return confirm('Pesanan {{$p->name}} akan dihapus, Yakin?')" href="/washadmin/hapus/{{$p->id}}" class="btn btn-danger btn-circle btn-sm" title="Hapus">
+                          <i class="fas fa-trash"></i></a></td>
                       @endunless
                     </tr>
                   @endforeach

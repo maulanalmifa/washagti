@@ -41,6 +41,12 @@ class AdminController extends Controller
         return $pdf->stream();
     }
 
+    public function hapus($id){
+        $pesanan = Pesanan::find($id);
+        $pesanan->delete();
+        return redirect('washadmin');
+    }
+
     public function harga(){
         $jenis = Harga::All();
         $delivery = Delivery::All();
