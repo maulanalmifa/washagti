@@ -11,6 +11,7 @@
 						<div class="country">Selesai Pada</div>
 						<div class="country">Nama</div>
 						<div class="country">Jenis Laundry</div>
+						<div class="country">Delivery</div>
 						<div class="country">Status</div>
 						<div class="country">Total Harga</div>
 					</div>
@@ -23,7 +24,8 @@
 						<div class="country">N/A</div>
 					@endif
 						<div class="country">{{ $g->name }}</div>
-						<div class="country">{{ $g->jenis }}</div>
+						<div class="country">{{ $g->jenis }} - {{$g->harga_jenis}}/kg</div>
+						<div class="country">{{$g->do}} - {{$g->harga_do}}</div>
 						<div class="country">{{ $g->status }}</div>
 					@if($g->status == 'Selesai')
 						<div class="country">{{ $g->total }}

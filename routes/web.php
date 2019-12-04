@@ -25,10 +25,6 @@ Route::get('/home', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-
-//Route::get('estimasi','EstimateController@index');
-//Route::get('blog','BlogController@index');
-//Route::get('tentang','AboutController@index');
 Route::get('/pesanan', 'PesananController@daftar');
 Route::post('/pesanan/tambah','PesananController@pesan');
 Route::get('/pesanan/cetak/{id}', 'PesananController@cetak');

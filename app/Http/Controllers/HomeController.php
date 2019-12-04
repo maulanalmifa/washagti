@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Harga;
+use App\Delivery;
 
 class HomeController extends Controller
 {
@@ -14,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('cekuser');
     }
 
     /**
@@ -24,6 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $jenis = Harga::All();
+        $delivery = Delivery::All();
+        return view('home',['jenis'=>$jenis],['delivery'=>$delivery]);
     }
 }
