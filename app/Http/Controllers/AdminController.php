@@ -14,7 +14,7 @@ class AdminController extends Controller
 {
     public function __construct()
     {
-        //$this->middleware('cekuser');
+        //$this->middleware('guest')->except('logout');
     }
 
     public function index(){
