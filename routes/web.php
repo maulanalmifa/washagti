@@ -10,29 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Harga;
+use App\Delivery;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomeController@index');
+Route::get('/home','HomeController@index')->name('home');
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
 Route::get('/pesanan', 'PesananController@daftar');
 Route::post('/pesanan/tambah','PesananController@pesan');
 Route::get('/pesanan/cetak/{id}', 'PesananController@cetak');
-Route::get('/washadmin', 'AdminController@index');
+Route::get('/washadmin', 'AdminController@index')->name('admin');
 Route::get('/washadmin/update/{id}', 'AdminController@update');
 Route::post('/washadmin/simpan', 'AdminController@simpan');
 Route::get('/washadmin/cetak/{id}', 'AdminController@cetak');
+Route::get('/washadmin/cetak', 'AdminController@cetakreport');
 Route::get('/washadmin/hapus/{id}','AdminController@hapus');
+Route::get('/washadmin/hapus','AdminController@hapusall');
 Route::get('/washadmin/harga', 'AdminController@harga');
 Route::get('/washadmin/up/{id}','AdminController@updateharga');
 Route::post('/washadmin/up/simpan','AdminController@simpanharga');

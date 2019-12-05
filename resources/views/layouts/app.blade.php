@@ -42,7 +42,7 @@
                         <div class="col-xl-6 col-md-6 ">
                             <div class="social_media_links">
                                 <a href="#">
-                                    <i class="fa fa-linkedin"></i>
+                                    <i class="fa fa-instagram"></i>
                                 </a>
                                 <a href="#">
                                     <i class="fa fa-facebook"></i>
@@ -56,7 +56,7 @@
                             <div class="short_contact_list">
                                 <ul>
                                     <li><a href="#"> <i class="fa fa-envelope"></i> info@washagti.com</a></li>
-                                    <li><a href="#"> <i class="fa fa-phone"></i> 081359XXX</a></li>
+                                    <li><a href="#"> <i class="fa fa-phone"></i> 081359872853</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -66,7 +66,14 @@
             <div id="sticky-header" class="main-header-area">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-xl-8 col-lg-9">
+                    <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="/">
+                                    <img src="/img/image10.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-9">
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
@@ -176,7 +183,8 @@
                                     <li><a href="#">Cuci Kering</a></li>
                                     <li><a href="#">Cuci Kering Setrika</a></li>
                                     <li><a href="#">Cuci Sepatu</a></li>
-                                    <li><a href="#">Setrika</a></li>
+                                    <li><a href="#">Standar</a></li>
+                                    <li><a href="#">Kilat</a></li>
                                 </ul>
     
                             </div>
@@ -188,7 +196,7 @@
                                 </h3>
                                 <p>
                                     Jl. Sumbersari No. 5 Malang <br>
-                                    081359XXXX <br>
+                                    081359872853 <br>
                                     info@washagti.com
                                 </p>
                             </div>
@@ -203,7 +211,7 @@
                         <div class="col-xl-12">
                             <p class="copy_right text-center">
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="/" target="_blank">Washagti</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
@@ -222,7 +230,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="col-xl-6">
+                            @if(Auth::check())
+                            <input type="text"  placeholder="Nama" name="nama" value="{{Auth::user()->name}}">
+                            @else
                             <input type="text"  placeholder="Nama" name="nama" required>
+                            @endif
                         </div>
                         <div class="col-xl-6">
                             <input type="tel"  placeholder="Nomor Telepon" name="telpon" required>

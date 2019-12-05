@@ -9,10 +9,9 @@
 					<div class="table-head">
 						<div class="country">Dipesan Pada</div>
 						<div class="country">Selesai Pada</div>
-						<div class="country">Nama</div>
+						<div class="country">Status</div>
 						<div class="country">Jenis Laundry</div>
 						<div class="country">Delivery</div>
-						<div class="country">Status</div>
 						<div class="country">Total Harga</div>
 					</div>
 					@foreach($pesanan as $g)
@@ -23,10 +22,9 @@
 					@else
 						<div class="country">N/A</div>
 					@endif
-						<div class="country">{{ $g->name }}</div>
+						<div class="country">{{ $g->status }}</div>
 						<div class="country">{{ $g->jenis }} - {{$g->harga_jenis}}/kg</div>
 						<div class="country">{{$g->do}} - {{$g->harga_do}}</div>
-						<div class="country">{{ $g->status }}</div>
 					@if($g->status == 'Selesai')
 						<div class="country">{{ $g->total }}
 							<div class="serial"><a target="_blank" href="/pesanan/cetak/{{$g->id}}" class="btn btn-danger btn-circle btn-sm" title="Cetak Nota">

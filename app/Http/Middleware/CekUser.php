@@ -17,10 +17,10 @@ class CekUser
     public function handle($request, Closure $next)
     {
         if(Auth::check()&& Auth::user()->name=='admin'){
-            return redirect('washadmin');
+            return redirect('/washadmin');
         }else{
-            return redirect('/');
+            return redirect('/home');
         }
-        return $next($request);
+        //return $next($request);
     }
 }

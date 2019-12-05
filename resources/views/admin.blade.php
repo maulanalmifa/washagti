@@ -65,6 +65,16 @@
                 </table>
               </div>
             </div>
+            <div class="card-footer py-3">
+              <div class="row">
+                <div class="col-lg-3">
+                  <a target="_blank" href="/washadmin/cetak">Cetak Report</a>
+                </div>
+                <div class="col-lg-3">
+                  <a onclick="return confirm('Semua Pesanan akan dihapus, Yakin?')" href="/washadmin/hapus">Hapus Semua</a>
+                <div class="col-lg-6">
+              </div>
+            </div>
           </div>
         </div>
         <!-- /.container-fluid -->

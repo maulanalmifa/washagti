@@ -12,8 +12,13 @@ use PDF;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        //$this->middleware('cekuser');
+    }
+
     public function index(){
-        $pesanan = Pesanan::All();
+        $pesanan = Pesanan::All()->sortByDesc('created_at');
         return view('admin', ['pesanan'=>$pesanan]);
     }
     
@@ -41,8 +46,20 @@ class AdminController extends Controller
         return $pdf->stream();
     }
 
+    public function cetakreport(){
+        $pesanan = Pesanan::All()->sortByDesc('created_at');
+        $pdf = PDF::loadview('adminreport',['pesanan'=>$pesanan]);
+        return $pdf->stream();   
+    }
+
     public function hapus($id){
         $pesanan = Pesanan::find($id);
+        $pesanan->delete();
+        return redirect('washadmin');
+    }
+
+    public function hapusall(){
+        $pesanan = Pesanan::where('status','Selesai');
         $pesanan->delete();
         return redirect('washadmin');
     }

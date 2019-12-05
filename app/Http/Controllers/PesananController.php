@@ -29,7 +29,7 @@ class PesananController extends Controller
     }
 
     public function daftar(){
-        $pesanan = Pesanan::where('name',Auth::user()-> name)->get();
+        $pesanan = Pesanan::where('name',Auth::user()-> name)->get()->sortByDesc('created_at');
         return view('pesanan', ['pesanan' => $pesanan]);
     }
 
