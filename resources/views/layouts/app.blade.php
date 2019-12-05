@@ -56,7 +56,7 @@
                             <div class="short_contact_list">
                                 <ul>
                                     <li><a href="#"> <i class="fa fa-envelope"></i> info@washagti.com</a></li>
-                                    <li><a href="#"> <i class="fa fa-phone"></i> 081359872853</a></li>
+                                    <li><a target="_blank" href=" https://api.whatsapp.com/send?phone=6281359872853&text=Info%20laundry%20sakti%20dong%20min%20:)"> <i class="fa fa-phone"></i> 081359872853</a></li>
                                 </ul>
                             </div>
                         </div>

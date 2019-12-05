@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class RedirectIfAuthenticated
 {
@@ -18,13 +19,12 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            if(Auth::check()&& Auth::user()->name=='admin'){
-                return redirect('/washadmin');
+            if(Auth::check()&& Auth::user()->name!='admin'){
+                return $next($request);
             }else{
-            return $next($request);
+                return redirect('/washadmin');
             }
         }
-
         return $next($request);
     }
 }
