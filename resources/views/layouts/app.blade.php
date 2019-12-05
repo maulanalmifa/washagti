@@ -41,7 +41,7 @@
                     <div class="row">
                         <div class="col-xl-6 col-md-6 ">
                             <div class="social_media_links">
-                                <a href="#">
+                                <a target="_blank" href="https://www.instagram.com/washagtiinaja">
                                     <i class="fa fa-instagram"></i>
                                 </a>
                                 <a href="#">
@@ -164,7 +164,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a target="_blank" href="https://www.instagram.com/washagtiinaja">
                                                 <i class="fa fa-instagram"></i>
                                             </a>
                                         </li>
